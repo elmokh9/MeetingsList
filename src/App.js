@@ -1,25 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import data from './data';
+import List from './List';
+import Cards from './Cards';
+import "./App.css";
 
-function App() {
+function App() { 
+  const [listData, setListData] = useState(data);
+
+  function resetData(){
+    console.log(listData.length);
+    setListData([]);
+    console.log(listData.length);
+  }
+
+  function del(id){
+    console.log(id);
+    setListData((prevItems)=>{
+      // the items are objects from prevItems
+      return prevItems.filter((items, index)=>{
+        return index !== id;
+      })
+    })
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div id='section'>
+      <h1 id='title'> {listData.length} Meetings today</h1>
+      {listData.map((value, index)=>{
+        console.log(listData)
+        return <Cards key = {index} id={index} data = {value} onPressed={del}/>
+      })}
+      <button onClick={resetData}>Clear All</button>
     </div>
+    
   );
+
 }
 
 export default App;
