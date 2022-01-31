@@ -8,6 +8,11 @@
   background-color: white; 
   padding: 1vw 1.5rem 1vw 1.5rem;
 }
+@media screen and (max-width: 992px) {
+  #section {
+    width: auto !important;
+  }
+}
 #title{
 font-weight: normal;
 font-size: 1.5rem;
