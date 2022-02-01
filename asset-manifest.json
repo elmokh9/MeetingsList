@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/MeetingsList/static/css/main.ba1e3c16.css",
+    "main.js": "/MeetingsList/static/js/main.dc01ba22.js",
+    "index.html": "/MeetingsList/index.html",
+    "main.ba1e3c16.css.map": "/MeetingsList/static/css/main.ba1e3c16.css.map",
+    "main.dc01ba22.js.map": "/MeetingsList/static/js/main.dc01ba22.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ba1e3c16.css",
+    "static/js/main.dc01ba22.js"
+  ]
+}
